@@ -1,18 +1,11 @@
-import controlP5.*; //<>// //<>// //<>//
+import controlP5.*; //<>//
 import processing.serial.*; //library to access serial comms
-
-
-//TODO: (07/09/2019)
-//Attempt to repair the control box jittery effect when performing emulation
-//Ability to record the values into a csv file 
 
 //Debugging console messages
 boolean printlineEnable=true;//Enable/disable println message to console [FOR DEBUGGING PURPOSES]
 boolean eventActionDisplay = false; //Enable/disable event and controller messages
 boolean printBuffer = true;//Enable/disable print sensor value buffers
 
-//Sensor buffer
-// RPM=0, GEAR,TPS, SPEED_MPH,WATER_TEMP,AIR_TEMP, MAP,BATT_VOLT, AMBIENT_TEMP,BUFFER_SIZE  //data storage order
 public static float[] sensorValues = new float[25]; //battery pack voltage, pack current, temperature, 0,cellv1,cellv2,cellv3,cellv4,cellv5, SOC_1, SOC_2, SOC_3, SOC_4, SOC_5,XR_error,alert_error,uv_error,ov_error,scd_error,ocd_error
 //Serial comms
 Serial port;
